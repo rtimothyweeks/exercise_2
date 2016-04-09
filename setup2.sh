@@ -9,4 +9,6 @@ cp 'w205-spring-16-labs-exercises/exercise_2/Twittercredentials.py' 'EX2Tweetcou
 cp 'w205-spring-16-labs-exercises/exercise_2/hello-stream-twitter.py' 'EX2Tweetcount/hello-stream-twitter.py'
 cp 'w205-spring-16-labs-exercises/exercise_2/psycopg-sample.py' 'EX2Tweetcount/psycopg-sample.py'
 cp 'w205-spring-16-labs-exercises/exercise_2/tweetwordcount/topologies/tweetwordcount.clj' 'EX2Tweetcount/topologies/tweetwordcount.clj'
+rm EX2Tweetcount/topologies/*.clj
+cp 'excercise_2/EX2tweetwordcount.clj' 'EX2Tweetcount/topologies/EX2tweetwordcount.clj'
 pip install tweepy
