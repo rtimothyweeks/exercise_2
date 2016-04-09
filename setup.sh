@@ -11,4 +11,3 @@ rm EXTwoTweetwordcount/topologies/*.clj
 cp 'exercise_2/EX2tweetwordcount.clj' 'EXTwoTweetwordcount/topologies/EX2tweetwordcount.clj'
 cp 'exercise_2/wordcount.py' 'EXTwoTweetwordcount/src/bolts/wordcount.py'
 pip install tweepy
-python 'exercise_2/create_db.py'
