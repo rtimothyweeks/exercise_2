@@ -1,10 +1,10 @@
 pip install psycopg2
 sparse quickstart 'EXT2Tweetwordcount'
-cp w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/spouts/tweets.py 'EX2Tweetwordcount/src/spouts'
-cp w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/bolts/parse.py 'EX2Tweetwordcount/src/bolts'
-cp w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/bolts/wordcount.py 'EX2Tweetwordcount/src/bolts'
-cp w205-spring-16-labs-exercises/exercise_2/Twittercredentials.py 'EX2Tweetwordcount'
-cp w205-spring-16-labs-exercises/exercise_2/hello-stream-twitter.py 'EX2Tweetwordcount'
-cp w205-spring-16-labs-exercises/exercise_2/psycopg-sample.py 'EX2Tweetwordcount'
-cp w205-spring-16-labs-exercises/exercise_2/tweetwordcount/topologies/tweetwordcount.clj 'EX2Tweetwordcount/topologies'
+cp w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/spouts/tweets.py 'EX2Tweetwordcount/src/spouts/tweets.py'
+cp w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/bolts/parse.py 'EX2Tweetwordcount/src/bolts/parse.py'
+cp w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/bolts/wordcount.py 'EX2Tweetwordcount/src/bolts/wordcount.py'
+cp w205-spring-16-labs-exercises/exercise_2/Twittercredentials.py 'EX2Tweetwordcount/Twittercredentials.py'
+cp w205-spring-16-labs-exercises/exercise_2/hello-stream-twitter.py 'EX2Tweetwordcount/hello-stream-twitter.py'
+cp w205-spring-16-labs-exercises/exercise_2/psycopg-sample.py 'EX2Tweetwordcount/psycopg-sample.py'
+cp w205-spring-16-labs-exercises/exercise_2/tweetwordcount/topologies/tweetwordcount.clj 'EX2Tweetwordcount/topologies/tweetwordcount.clj'
 pip install tweepy
