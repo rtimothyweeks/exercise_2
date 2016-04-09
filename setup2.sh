@@ -2,7 +2,7 @@
 pip install --upgrade pip
 pip install psycopg2
 sparse quickstart EX2Tweetcount
-cp 'w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/spouts/tweets.py' 'EX2Tweetcount/src/spounts/tweets.py'
+cp 'w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/spouts/tweets.py' 'EX2Tweetcount/src/spouts/tweets.py'
 cp 'w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/bolts/parse.py' 'EX2Tweetcount/src/bolts/parse.py'
 cp 'w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/bolts/wordcount.py' 'EX2Tweetcount/src/bolts/wordcount.py'
 cp 'w205-spring-16-labs-exercises/exercise_2/Twittercredentials.py' 'EX2Tweetcount/Twittercredentials.py'
