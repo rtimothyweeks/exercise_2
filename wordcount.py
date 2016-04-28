@@ -1,5 +1,5 @@
 from __future__ import absolute_import, print_function, unicode_literals
-
+import psycopg2
 from collections import Counter
 from streamparse.bolt import Bolt
 
