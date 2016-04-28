@@ -1,6 +1,13 @@
 #!/bin/bash
+mount -t ext4 /dev/xvdf/ /data
+bash /data/start_postgres.sh
+mv /usr/bin/python /usr/bin/python266
+ln -s /usr/bin/python2.7 /usr/bin/python
+pip install virtualenv
+pip install streamparse
 pip install --upgrade pip
 pip install psycopg2
+pip install tweepy
 sparse quickstart EXTwoTweetwordcount
 cp 'w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/spouts/tweets.py' 'EXTwoTweetwordcount/src/spouts/tweets.py'
 cp 'w205-spring-16-labs-exercises/exercise_2/tweetwordcount/src/bolts/parse.py' 'EXTwoTweetwordcount/src/bolts/parse.py'
@@ -10,4 +17,3 @@ cp 'w205-spring-16-labs-exercises/exercise_2/psycopg-sample.py' 'EXTwoTweetwordc
 rm EXTwoTweetwordcount/topologies/*.clj
 cp 'exercise_2/EX2tweetwordcount.clj' 'EXTwoTweetwordcount/topologies/EX2tweetwordcount.clj'
 cp 'exercise_2/wordcount.py' 'EXTwoTweetwordcount/src/bolts/wordcount.py'
-pip install tweepy
