@@ -11,6 +11,7 @@ def qry(word):
     q = "select count from Tweetwordcount where word='%s';" % word
     print q
     count = cur.execute(q)
+    print count
   print "Total number of occurences of '%s': %s" % (word, count)
   
 qry(sys.argv[1])
