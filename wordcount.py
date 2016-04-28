@@ -21,7 +21,7 @@ class WordCounter(Bolt):
         count = self.cur.execute("select count from Tweetwordcount where word='%s';" % word)
         if count is None:
             count = 0
-            self.cur.execute("INSERT into Tweetwordcount ('%s',%s);" % (word,count))
+            self.cur.execute("INSERT into Tweetwordcount VALUES ('%s',%s);" % (word,count))
         else:
             count += 1
             self.cur.execute("UPDATE Tweetwordcount SET count=%s WHERE word='%s';" % (count, word))
