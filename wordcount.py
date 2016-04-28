@@ -10,7 +10,7 @@ class WordCounter(Bolt):
     def initialize(self, conf, ctx):
         self.counts = Counter()
         self.redis = StrictRedis()
-        self.conn = psycopg2.connect(database="Tcount", user="postgres", password="pass", host="localhost", port="5432")
+        self.conn = psycopg2.connect(database="postgres")
         self.cur = self.conn.cursor()
 
     def process(self, tup):
