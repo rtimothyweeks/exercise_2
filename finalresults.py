@@ -8,7 +8,9 @@ def qry(word):
   if word is None:
     q = ''
   else:
-    count = cur.execute("select count from Tweetwordcount where word='%s';" % word)
+    q = "select count from Tweetwordcount where word='%s';" % word
+    print q
+    count = cur.execute(q)
   print "Total number of occurences of '%s': %s" % (word, count)
   
 qry(sys.argv[1])
