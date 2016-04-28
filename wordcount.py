@@ -14,7 +14,7 @@ class WordCounter(Bolt):
         self.cur = self.conn.cursor()
 
     def process(self, tup):
-        word = tup.values[0].strip("\"?<>,'.:;)")
+        word = tup.values[0].replace("'","")
         
         # Write codes to increment the word count in Postgres
         # Get and increment current db count
