@@ -19,12 +19,12 @@ class WordCounter(Bolt):
         # Write codes to increment the word count in Postgres
         # Get and increment current db count
         count = self.cur.execute("select count from Tweetwordcount where word='%s';" % word)
-        if count is None:
-            count = 0
-            self.cur.execute("INSERT into Tweetwordcount VALUES ('%s',%s);" % (word,count))
-        else:
+        if count >= 1:
             count += 1
             self.cur.execute("UPDATE Tweetwordcount SET count=%s WHERE word='%s';" % (count, word))
+        else:
+            count = 1
+            self.cur.execute("INSERT into Tweetwordcount VALUES ('%s',%s);" % (word,count))
         
         # Commit count change to db
         
