@@ -15,6 +15,12 @@ class WordCounter(Bolt):
 
     def process(self, tup):
         word = tup.values[0].replace("'","")
+        # Increment the local count
+        self.counts[word] += 1
+        self.emit([word, self.counts[word]])
+
+        # Log the count - just to see the topology running
+        self.log('%s: %d' % (word, self.counts[word]))
         
         # Write codes to increment the word count in Postgres
         # Get and increment current db count
@@ -30,9 +36,4 @@ class WordCounter(Bolt):
         
         self.conn.commit()
 
-        # Increment the local count
-        self.counts[word] += 1
-        self.emit([word, self.counts[word]])
-
-        # Log the count - just to see the topology running
-        self.log('%s: %d' % (word, self.counts[word]))
+        
