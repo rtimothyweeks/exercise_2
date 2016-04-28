@@ -1,7 +1,7 @@
 import sys
 import psycopg2
 
-con = psycopg2.connect(database'postgres')
+con = psycopg2.connect(database='postgres')
 cur = con.cursor()
 
 def qry(word):
