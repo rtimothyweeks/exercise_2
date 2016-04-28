@@ -1,6 +1,7 @@
 #!/bin/bash
 mount -t ext4 /dev/xvdf/ /data
 bash /data/start_postgres.sh
+sudo -u postgres createuser root -s
 mv /usr/bin/python /usr/bin/python266
 ln -s /usr/bin/python2.7 /usr/bin/python
 sudo curl -o ez_setup.py https://bootstrap.pypa.io/ez_setup.py
