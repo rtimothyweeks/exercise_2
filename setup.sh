@@ -22,4 +22,4 @@ cp 'w205-spring-16-labs-exercises/exercise_2/psycopg-sample.py' 'EXTwoTweetwordc
 rm EXTwoTweetwordcount/topologies/*.clj
 cp 'exercise_2/EX2tweetwordcount.clj' 'EXTwoTweetwordcount/topologies/EX2tweetwordcount.clj'
 cp 'exercise_2/wordcount.py' 'EXTwoTweetwordcount/src/bolts/wordcount.py'
-python create_db.py
+python exercise_2/create_db.py
