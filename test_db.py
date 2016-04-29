@@ -5,5 +5,6 @@ cur = conn.cursor()
 
 cur.execute("INSERT into Tweetwordcount VALUES ('test',989);")
 conn.commit()
-print cur.execute("select * from Tweetwordcount;")
+cur.execute("select * from Tweetwordcount;")
+cur.fetchall()
 conn.close()
