@@ -11,7 +11,8 @@ def qry(argv):
   if len(argv) == 1:
     q = 'select word, count from Tweetwordcount order by count desc;'
     cur.execute(q)
-    print cur.fetchall()
+    for pair in cur:
+      print pair
   else:
     word = argv[1]
     q = "select count from Tweetwordcount where word='%s';" % word
