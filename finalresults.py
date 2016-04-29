@@ -7,6 +7,7 @@ cur = con.cursor()
 # t = cur.execute('select * from Tweetwordcount limit 20;')
 # print t
 def qry(argv):
+  print argv
   if len(argv) == 1:
     q = 'select word, count from Tweetwordcount order by count;'
     cur.execute(q)
@@ -18,6 +19,6 @@ def qry(argv):
     cur.execute(q)
     count = cur.fetchall()[0][0]
     # print count
-  print "Total number of occurences of '%s': %s" % (word, count)
+    print "Total number of occurences of '%s': %s" % (word, count)
   
 qry(sys.argv)
