@@ -7,5 +7,7 @@ word = 'RTW_test6'
 cur.execute("INSERT into Tweetwordcount VALUES ('%s',989);" % word)
 conn.commit()
 cur.execute("select count from Tweetwordcount where word='%s';" % word)
-print cur.fetchone()[0]
+count = cur.fetchone()[0]
+print count
+print count > 1
 conn.close()
