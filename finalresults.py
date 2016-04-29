@@ -9,7 +9,7 @@ cur = con.cursor()
 def qry(argv):
   print argv
   if len(argv) == 1:
-    q = 'select word, count from Tweetwordcount order by count;'
+    q = 'select word, count from Tweetwordcount order by count desc;'
     cur.execute(q)
     print cur.fetchone()
   else:
