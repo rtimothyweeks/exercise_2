@@ -7,10 +7,10 @@ ln -s /usr/bin/python2.7 /usr/bin/python
 sudo curl -o ez_setup.py https://bootstrap.pypa.io/ez_setup.py
 python ez_setup.py
 /usr/bin/easy_install-2.7 pip
+pip install --upgrade pip
 pip install redis
 pip install virtualenv
 pip install streamparse
-pip install --upgrade pip
 pip install psycopg2
 pip install tweepy
 sparse quickstart EXTwoTweetwordcount
