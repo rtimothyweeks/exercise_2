@@ -4,7 +4,7 @@ import sys
 con = psycopg2.connect(database="postgres")
 cur = con.cursor()
 
-if len(sys.argv) < 3:
+if len(sys.argv) < 2:
   print 'Insufficient arguments provided'
   sys.exit()
 
