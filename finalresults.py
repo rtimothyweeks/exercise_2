@@ -8,7 +8,9 @@ cur = con.cursor()
 # print t
 def qry(word):
   if word is None:
-    q = ''
+    q = 'select word, count from Tweetwordcount order by count;'
+    cur.execute(q)
+    print cur.fetchone()
   else:
     q = "select count from Tweetwordcount where word='%s';" % word
     # print q
