@@ -31,9 +31,6 @@ class WordCounter(Bolt):
         else:
             up_count = 1 + count[0]
             self.cur.execute("UPDATE Tweetwordcount SET count=%s WHERE word='%s';" % (up_count, word))
-        else:
-            
-        
+
         # Commit count change to db
-        
         self.conn.commit()
