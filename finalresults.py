@@ -7,7 +7,6 @@ cur = con.cursor()
 # t = cur.execute('select * from Tweetwordcount limit 20;')
 # print t
 def qry(argv):
-  print argv
   if len(argv) == 1:
     q = 'select word, count from Tweetwordcount order by count desc;'
     cur.execute(q)
